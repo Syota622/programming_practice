@@ -36,14 +36,25 @@ end
 # コマンドラインのオプションを取り扱うためのライブラリ
 options = {}
 OptionParser.new do |opts|
-  opts.banner = "Usage: calendar.rb [options]"
 
-  opts.on('-m', '--month MONTH', 'Specify the month') do |month|
-    options[:month] = month.to_i
+  # ファイル実行時に、明示的に「月」を指定する
+  # 例）ruby calendar.rb -m 4 
+  opts.on('-m MONTH') do |month|
+    if month.to_i.between?(1, 12)
+      options[:month] = month.to_i
+    else
+      puts "#{month} is neither a month number (1..12) nor a name"
+      exit
+    end
   end
+
 end.parse!
 
+# 本年度
 current_year = Date.today.year
+
+# options[:month] の値が存在する場合(-m オプションが指定された場合) or 
+# options[:month] の値が存在しない場合（オプションが指定されていない場合）は現在の月(Date.today.month)
 month = options[:month] || Date.today.month
 
 calender_output(current_year, month)
@@ -51,11 +62,23 @@ calender_output(current_year, month)
 
 # ###############################################################################
 # macでcalコマンドを実行した時の結果
-# ruby % ruby calendar.rb -m 6
-# 6月 2023
-# 日 月 火 水 木 金 土
-#              1  2  3 
-#  4  5  6  7  8  9 10 
-# 11 12 13 14 15 16 17 
-# 18 19 20 21 22 23 24 
-# 25 26 27 28 29 30
+# ruby % cal
+#       4月 2023         
+# 日 月 火 水 木 金 土  
+#                    1  
+#  2  3  4  5  6  7  8  
+#  9 10 11 12 13 14 15  
+# 16 17 18 19 20 21 22  
+# 23 24 25 26 27 28 29  
+# 30 
+
+# ###############################################################################
+# calendarファイルの実行結果
+# ruby % ruby calendar.rb -m 4 
+#      4月 2023
+# 月 火 水 木 金 土 日
+#                 1  2 
+#  3  4  5  6  7  8  9 
+# 10 11 12 13 14 15 16 
+# 17 18 19 20 21 22 23 
+# 24 25 26 27 28 29 30 
