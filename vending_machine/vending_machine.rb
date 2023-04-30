@@ -19,7 +19,7 @@ class Suica
 
   # セッターメソッド
   def setDeposit=(deposit)
-    @deposit = deposit
+    @deposit = deposit if deposit < 0
   end
 
 end
