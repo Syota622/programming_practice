@@ -108,6 +108,33 @@ class VendingMachine2 < VendingMachine
     @stock_list = [@stock, @stock2, @stock3]
   end
 
+  # 4. ジュースを購入できるかどうかを判定する
+  def purchase?(suica, juice_name)
+
+    @selected_juice = [@stock, @stock2, @stock3].find { |juice| juice[:name] == juice_name }
+
+    if suica.getDeposit < @selected_juice[:price]
+      raise "チャージ残高が足りません"
+    elsif @selected_juice[:count] == 0
+      raise "在庫がありません"
+    else
+      @bool_purchase = true
+    end
+
+  end
+
+  # 4. ジュースを購入する
+  def juice_purchase(suica, juice_name)
+    if @bool_purchase
+      # 4. ジュースの在庫を減らす
+      @selected_juice[:count] -= 1
+      # 4. Suicaのチャージ残高を減らす
+      suica.setDeposit = suica.getDeposit - @selected_juice[:price]
+      # 4. 売り上げ金額を増やす
+      @sales += @selected_juice[:price]
+    end
+  end
+
 end
 
 puts ''
@@ -138,7 +165,7 @@ p '2. 自動販売機の在庫：' + vendingmachine.stock.to_s + '個'
 
 # 3. ジュースを購入できるかどうかを判定する
 vendingmachine.purchase?(suica)
-p '3. 購入可能です' if vendingmachine.bool_purchase
+p '3. ペプシ購入可能です' if vendingmachine.bool_purchase
 
 # 3. ジュースを購入する
 vendingmachine.juice_purchase(suica)
@@ -156,17 +183,28 @@ vendingmachine2 = VendingMachine2.new()
 # 4. 自動販売機に在庫を補充する
 vendingmachine2.store("ペプシ", 10)
 vendingmachine2.store("モンスター", 5)
-vendingmachine2.store("いろはす", 3)
+vendingmachine2.store("いろはす", 1)
 
 # 4. 自動販売機は購入可能なドリンクのリストを取得
 p '4. ドリンクリスト：' + vendingmachine2.stock_list.to_s
 
 # 4. ジュースを購入できるかどうかを判定する
-vendingmachine2.purchase?(suica)
-p '4. 購入可能です' if vendingmachine2.bool_purchase
+vendingmachine2.purchase?(suica, "ペプシ")
+p '4. ペプシ購入可能です' if vendingmachine2.bool_purchase
 
 # 4. ジュースを購入する
-vendingmachine2.juice_purchase(suica)
+vendingmachine2.juice_purchase(suica, "ペプシ")
+
+# 4. 売り上げ金額を確認する
+p '4. 売り上げ金額：' + vendingmachine2.sales.to_s + '円'
+puts ''
+
+# 4. ジュースを購入できるかどうかを判定する
+vendingmachine2.purchase?(suica, "いろはす")
+p '4. いろはす購入可能です' if vendingmachine2.bool_purchase
+
+# 4. ジュースを購入する
+vendingmachine2.juice_purchase(suica, "いろはす")
 
 # 4. 売り上げ金額を確認する
 p '4. 売り上げ金額：' + vendingmachine2.sales.to_s + '円'
