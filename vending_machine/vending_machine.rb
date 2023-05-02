@@ -153,14 +153,14 @@ suica.charge(300)
 puts "Suicaのチャージ残高: #{suica.deposit}"
 
 # 自動販売機に在庫を補充する
-puts "ペプシの在庫（ジュース格納前）: #{irohasu.count}"
+puts "いろはすの在庫（ジュース格納前）: #{irohasu.count}"
 
 vending_machine.store("いろはす", 15)
-puts "ペプシの在庫（ジュース格納後）: #{irohasu.count}"
+puts "いろはすの在庫（ジュース格納後）: #{irohasu.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{irohasu.name}を購入できます" if vending_machine.purchase(suica, "いろはす")
-puts "ペプシの在庫（ジュース購入後）: #{irohasu.count}"
+puts "いろはすの在庫（ジュース購入後）: #{irohasu.count}"
 
 #チャージ残高を確認する
 puts "##### 1回目のチャージ残高：550円に加えて、チャージ金額：300円、購入金額：120円を計算した730円の結果が一致 #####"
