@@ -20,112 +20,152 @@ class Suica
 
   # セッターメソッド
   def deposit=(deposit)
-    @deposit = deposit if deposit < 0
+    @deposit = deposit if deposit >= 0
   end
 
 end
 
 # ジュースを作成する
 class Juice
-  def initialize(name, count)
+
+  # 初期値
+  ## 例）pepsi = Juice.new("ペプシ", 150, 5)
+  def initialize(name, price, count)
     @name = name
+    @price = price
     @count = count
   end
 
+  # ゲッターメソッド
   def name
     @name
   end
 
+  # ゲッターメソッド
+  def price
+    @price
+  end
+
+  # ゲッターメソッド
   def count
     @count
   end
 
+  # セッターメソッド
   def count=(count)
-    @count = count
+    @count = count if count >= 0
   end
-
 end
 
 # 自動販売機を作成する
 class VendingMachine
 
-  def initialize(stock)
+  # 初期値
+  ## 例）vending_machine = VendingMachine.new([pepsi, monster, irohasu])
+  def initialize(juices)
     @bool_purchase = false
     @sales = 0
-    @juice = {name: "ペプシ", price: 150, count: 5}
-    @juice2 = {name: "モンスター", price: 230, count: 5}
-    @juice3 = {name: "いろはす", price: 120, count: 5}
-    @stock = stock
+    @juices = juices
   end
 
-  # 自動販売機はジュースを3種類格納
-  def store(name, count)
-    if name == @juice[:name]
-      @juice[:count] += count
-    elsif name == @juice2[:name]
-      @juice2[:count] += count
-    elsif name == @juice3[:name]
-      @juice3[:count] += count
-    end
-  end
+  # ジュースを購入できるかどうか判断する
+  ## 例）suica：Suica.new()
+  ## 例）juice_name："ペプシ"
+  ## 例）@juices = [pepsi, monster, irohasu]
+  ## 例）pepsi = Juice.new("ペプシ", 150, 5)
+  def purchase(suica, juice_name)
 
-  # 自動販売機は購入可能なドリンクのリストを取得
-  def juice_list
-    @juice_list = [@juice, @juice2, @juice3]
-  end
+    # @selected_juice = Juice.new("ペプシ", 150, 5)
+    @selected_juice = @juices.find { |juice| juice.name == juice_name }
 
-  # ジュースを購入できるかどうかを判定する
-  def purchase?(suica, juice_name)
-
-    @selected_juice = [@juice, @juice2, @juice3].find { |juice| juice[:name] == juice_name }
-
-    if suica.deposit < @selected_juice[:price]
+    if suica.deposit < @selected_juice.price
       raise "チャージ残高が足りません"
-    elsif @selected_juice[:count] == 0
+    elsif @selected_juice.count == 0
       raise "在庫がありません"
     else
-      @bool_purchase = true
+      juice_purchase(suica)
     end
 
   end
 
   # ジュースを購入する
-  def juice_purchase(suica, juice_name)
-    if @bool_purchase
-      # ジュースの在庫を減らす
-      @selected_juice[:count] -= 1
-      # Suicaのチャージ残高を減らす
-      suica.deposit = suica.deposit - @selected_juice[:price]
-      # 売り上げ金額を増やす
-      @sales += @selected_juice[:price]
-    end
+  def juice_purchase(suica)
+    # ジュースの在庫を減らす
+    @selected_juice.count -= 1
+    # Suicaのチャージ残高を減らす
+    suica.deposit -= @selected_juice.price
+    # 売り上げ金額を増やす
+    @sales += @selected_juice.price
+  end
+
+  # 自動販売機はジュースを格納
+  def store(name, count)
+    target_juice = @juices.find { |juice| juice.name == name }
+    target_juice.count += count if target_juice
+  end
+
+  # ゲッターメソッド
+  def sales
+    @sales
+  end
+
+  # セッターメソッド
+  def sales=(sales)
+    @sales = sales if sales >= 0
   end
 
 end
 
+puts "========== 1回目の操作 =========="
 # suicaインスタンス作成
 suica = Suica.new()
 suica.charge(200)
 puts "Suicaのチャージ残高: #{suica.deposit}"
 
 # ジュースを管理するためのインスタンスを作成
-pepsi = Juice.new("ペプシ", 5)
-monster = Juice.new("モンスター", 5)
-irohasu = Juice.new("いろはす", 5)
+pepsi = Juice.new("ペプシ", 150, 5)
+monster = Juice.new("モンスター", 230, 5)
+irohasu = Juice.new("いろはす", 120, 5)
 
 # 自動販売機のインスタンスを作成
 vending_machine = VendingMachine.new([pepsi, monster, irohasu])
 
-# ジュースを購入できるかどうかを判定する
-vending_machine.purchase(suica, pepsi)
+# 自動販売機に在庫を補充する
+puts "ペプシの在庫（ジュース格納前）: #{pepsi.count}"
 
-vending_machine.store(pepsi, 10)
+vending_machine.store("ペプシ", 10)
+puts "ペプシの在庫（ジュース格納後）: #{pepsi.count}"
 
-vending_machine.purchase(suica, monster)
+# ジュースが購入できるかどうかを判定&ジュースの購入する
+puts "#{pepsi.name}を購入できます" if vending_machine.purchase(suica, "ペプシ")
+puts "ペプシの在庫（ジュース購入後）: #{pepsi.count}"
 
-puts "購入可能なドリンク: #{vending_machine.available_drinks(suica)}"
-puts "ペプシの在庫: #{vending_machine.juice("ペプシ")}"
+#チャージ残高を確認する
+puts "Suicaのチャージ残高: #{suica.deposit}"
+
+# 自動販売機は現在の売上金額を取得
 puts "現在の売上金額: #{vending_machine.sales}"
-puts "Suicaのチャージ残高: #{suica.balance}"
 
+puts
+puts "========== 2回目の操作 =========="
 
+suica.charge(300)
+puts "Suicaのチャージ残高: #{suica.deposit}"
+
+# 自動販売機に在庫を補充する
+puts "ペプシの在庫（ジュース格納前）: #{irohasu.count}"
+
+vending_machine.store("いろはす", 15)
+puts "ペプシの在庫（ジュース格納後）: #{irohasu.count}"
+
+# ジュースが購入できるかどうかを判定&ジュースの購入する
+puts "#{irohasu.name}を購入できます" if vending_machine.purchase(suica, "いろはす")
+puts "ペプシの在庫（ジュース購入後）: #{irohasu.count}"
+
+#チャージ残高を確認する
+puts "##### 1回目のチャージ残高：550円に加えて、チャージ金額：300円、購入金額：120円を計算した730円の結果が一致 #####"
+puts "Suicaのチャージ残高: #{suica.deposit}"
+
+# 自動販売機は現在の売上金額を取得
+puts "##### 1回目に購入したペプシ：150円、2回目に購入したいろはす120円の合計270円が一致 #####"
+puts "現在の売上金額: #{vending_machine.sales}"
