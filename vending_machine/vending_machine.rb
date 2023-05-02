@@ -124,15 +124,10 @@ irohasu = Juice.new("いろはす", 120)
 # 自動販売機のインスタンスを作成
 vending_machine = VendingMachine.new([pepsi, monster, irohasu])
 
-# 自動販売機に在庫を補充する
-puts "在庫（ジュース格納前）: #{vending_machine.count}"
-
-vending_machine.store("ペプシ", 10)
-puts "在庫（ジュース格納後）: #{vending_machine.count}"
+vending_machine.store("ペプシ", 5)
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{pepsi.name}を購入できます" if vending_machine.purchase(suica, "ペプシ")
-puts "在庫（ジュース購入後）: #{vending_machine.count}"
 
 #チャージ残高を確認する
 puts "Suicaのチャージ残高: #{suica.deposit}"
@@ -146,15 +141,27 @@ puts "========== 2回目の操作 =========="
 suica.charge(300)
 puts "Suicaのチャージ残高: #{suica.deposit}"
 
-# 自動販売機に在庫を補充する
-puts "在庫（ジュース格納前）: #{vending_machine.count}"
-
-vending_machine.store("いろはす", 15)
-puts "在庫（ジュース格納後）: #{vending_machine.count}"
+vending_machine.store("いろはす", 5)
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{irohasu.name}を購入できます" if vending_machine.purchase(suica, "いろはす")
-puts "在庫（ジュース購入後）: #{vending_machine.count}"
+
+#チャージ残高を確認する
+puts "Suicaのチャージ残高: #{suica.deposit}"
+
+# 自動販売機は現在の売上金額を取得
+puts "現在の売上金額: #{vending_machine.sales}"
+
+puts
+puts "========== 3回目の操作 =========="
+
+suica.charge(300)
+puts "Suicaのチャージ残高: #{suica.deposit}"
+
+vending_machine.store("モンスター", 5)
+
+# ジュースが購入できるかどうかを判定&ジュースの購入する
+puts "#{monster.name}を購入できます" if vending_machine.purchase(suica, "モンスター")
 
 #チャージ残高を確認する
 puts "Suicaのチャージ残高: #{suica.deposit}"
