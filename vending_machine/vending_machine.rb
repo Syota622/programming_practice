@@ -1,4 +1,4 @@
-# スイカを作成する
+# Sucicaを作成する
 class Suica
 
   # 初期状態で500円のチャージがされている
@@ -133,7 +133,7 @@ vending_machine = VendingMachine.new([pepsi, monster, irohasu])
 vending_machine.store("ペプシ", 5)
 
 # 購入可能なジュースのリストを取得
-puts "購入可能なジュースのリスト：#{vending_machine.count}"
+puts "自動販売機の購入可能なジュースのリスト：#{vending_machine.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{pepsi.name}を購入できます" if vending_machine.purchase(suica, "ペプシ")
@@ -154,7 +154,7 @@ puts "Suicaのチャージ残高: #{suica.deposit}"
 vending_machine.store("いろはす", 5)
 
 # 購入可能なジュースのリストを取得
-puts "購入可能なジュースのリスト：#{vending_machine.count}"
+puts "自動販売機の購入可能なジュースのリスト：#{vending_machine.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{irohasu.name}を購入できます" if vending_machine.purchase(suica, "いろはす")
@@ -175,7 +175,7 @@ puts "Suicaのチャージ残高: #{suica.deposit}"
 vending_machine.store("モンスター", 5)
 
 # 購入可能なジュースのリストを取得
-puts "購入可能なジュースのリスト：#{vending_machine.count}"
+puts "自動販売機の購入可能なジュースのリスト：#{vending_machine.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{monster.name}を購入できます" if vending_machine.purchase(suica, "モンスター")
