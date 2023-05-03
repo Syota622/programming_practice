@@ -49,22 +49,33 @@ end
 # 自動販売機を作成する
 class VendingMachine
 
-  # 初期値
+  # 初期値([pepsi, monster, irohasu])
   def initialize(juices)
     @bool_purchase = false
-    @count = 0
+    @count = Hash.new(0) # 存在しないキーが指定されたときにデフォルト値 0 を返すように設定(@count[name] += count if target_juiceでnilエラーが発生するため)
+    @count["ペプシ"] = 5 # ペプシの初期在庫を 5 に設定
     @sales = 0
     @juices = juices
   end
 
-  # ジュースを購入できるかどうか判断する
+  # 自動販売機はジュースを格納：例("ペプシ", 5)
+  # @count変数の中身(実装例)
+  ## {"ペプシ"=>5}
+  ## {"ペプシ"=>5, "モンスター"=>5}
+  ## {"ペプシ"=>5, "モンスター"=>5, "いろはす"=>5}
+  def store(name, count)
+    target_juice = @juices.find { |juice| juice.name == name }
+    @count[name] += count if target_juice
+  end
+
+  # ジュースを購入できるかどうか判断する：例(suica, "ペプシ")
   def purchase(suica, juice_name)
 
     @selected_juice = @juices.find { |juice| juice.name == juice_name }
 
     if suica.deposit < @selected_juice.price
       raise "チャージ残高が足りません"
-    elsif @count == 0
+    elsif @count[juice_name] == 0
       raise "在庫がありません"
     else
       juice_purchase(suica)
@@ -75,17 +86,11 @@ class VendingMachine
   # ジュースを購入する
   def juice_purchase(suica)
     # ジュースの在庫を減らす
-    @count -= 1
+    @count[@selected_juice.name] -= 1
     # Suicaのチャージ残高を減らす
     suica.deposit -= @selected_juice.price
     # 売り上げ金額を増やす
     @sales += @selected_juice.price
-  end
-
-  # 自動販売機はジュースを格納
-  def store(name, count)
-    target_juice = @juices.find { |juice| juice.name == name }
-    @count += count if target_juice
   end
 
   # ゲッターメソッド
@@ -124,7 +129,11 @@ irohasu = Juice.new("いろはす", 120)
 # 自動販売機のインスタンスを作成
 vending_machine = VendingMachine.new([pepsi, monster, irohasu])
 
+# 在庫を追加する
 vending_machine.store("ペプシ", 5)
+
+# 購入可能なジュースのリストを取得
+puts "購入可能なジュースのリスト：#{vending_machine.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{pepsi.name}を購入できます" if vending_machine.purchase(suica, "ペプシ")
@@ -141,7 +150,11 @@ puts "========== 2回目の操作 =========="
 suica.charge(300)
 puts "Suicaのチャージ残高: #{suica.deposit}"
 
+# 在庫を追加する
 vending_machine.store("いろはす", 5)
+
+# 購入可能なジュースのリストを取得
+puts "購入可能なジュースのリスト：#{vending_machine.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{irohasu.name}を購入できます" if vending_machine.purchase(suica, "いろはす")
@@ -158,7 +171,11 @@ puts "========== 3回目の操作 =========="
 suica.charge(300)
 puts "Suicaのチャージ残高: #{suica.deposit}"
 
+# 在庫を追加する
 vending_machine.store("モンスター", 5)
+
+# 購入可能なジュースのリストを取得
+puts "購入可能なジュースのリスト：#{vending_machine.count}"
 
 # ジュースが購入できるかどうかを判定&ジュースの購入する
 puts "#{monster.name}を購入できます" if vending_machine.purchase(suica, "モンスター")
