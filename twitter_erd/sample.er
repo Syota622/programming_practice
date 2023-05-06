@@ -20,7 +20,7 @@
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
-[nice]
+[likes]
   *id {label: "varchar, not null"}
   user_id { label: "varchar, not null, FK(users)"}
   tweet_id { label: "varchar, not null, FK(tweets)"}
@@ -40,7 +40,7 @@
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
-[dms]
+[direct_messages]
   *id {label: "varchar, not null"}
   user_id { label: "varchar, not null, FK(users)"}
   content {label: "varchar, not null"}
@@ -67,12 +67,12 @@
 # 0 or more      *
 # 1 or more      +
 users 1--* `tweets` {label: "user_id"}
-users 1--* `nice` {label: "user_id"}
-tweets *--1 `nice` {label: "tweet_id"}
+users 1--* `likes` {label: "user_id"}
+tweets *--1 `likes` {label: "tweet_id"}
 users *--1 `retweets` {label: "user_id"}
 tweets *--1 `retweets` {label: "tweet_id"}
 users *--1 `follows` {label: "user_id"}
-users *--1 `dms` {label: "user_id"}
+users *--1 `direct_messages` {label: "user_id"}
 users *--1 `notifications` {label: "user_id"}
 users *--1 `bookmarks` {label: "user_id"}
 tweets *--1 `bookmarks` {label: "tweet_id"}
