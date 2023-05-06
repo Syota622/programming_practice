@@ -66,8 +66,8 @@
 # exactly 1      1
 # 0 or more      *
 # 1 or more      +
-users *--1 `tweets` {label: "user_id"}
-users *--1 `nice` {label: "user_id"}
+users 1--* `tweets` {label: "user_id"}
+users 1--* `nice` {label: "user_id"}
 tweets *--1 `nice` {label: "tweet_id"}
 users *--1 `retweets` {label: "user_id"}
 tweets *--1 `retweets` {label: "tweet_id"}
