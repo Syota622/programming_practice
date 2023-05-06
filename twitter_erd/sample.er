@@ -75,4 +75,4 @@ users *--1 `follows` {label: "user_id"}
 users *--1 `dms` {label: "user_id"}
 users *--1 `notifications` {label: "user_id"}
 users *--1 `bookmarks` {label: "user_id"}
-bookmarks *--1 `tweets` {label: "tweet_id"}
+tweets *--1 `bookmarks` {label: "tweet_id"}
