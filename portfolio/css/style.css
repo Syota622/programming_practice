@@ -1,0 +1,100 @@
+/* ### header ### */
+.header-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-parent .header-left,
+.header-parent .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-parent .header-right > div {
+  margin-left: 20px; /* 右側の各要素間にマージンを設定 */
+}
+
+/* ### article全体 ### */
+.article {
+  background-color: #edf2f7;
+}
+
+/* articleのヘッダー */
+.article-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.article-header-icon {
+  margin-top: 20px; /* アイコンの上にマージンを追加 */
+  margin-bottom: 10px; /* アイコンの下にマージンを追加 */
+}
+
+.article-header-title {
+  font-size: 3.5em;  /* テキストサイズを指定 */
+}
+
+/* articleのmain部分 */
+.article-main {
+  display: flex;
+}
+
+/* flexの割合 */
+.article-main-sub {
+  flex: 1.0; /* 成長する能力を0.5に設定 */
+}
+
+.article-main-body {
+  flex: 7.0; /* 成長する能力を7.0に設定 */
+  background-color: white;
+  border-radius: 10px; /* 角を丸くする */
+}
+
+.article-main-description {
+  flex: 2.5; /* 成長する能力を2.5に設定 */
+  background-color: #edf2f7;
+  border-radius: 10px; /* 角を丸くする */
+  padding: 5px 0; /* div要素との間に隙間を作るためのパディング */
+}
+
+/* # main */
+.article-main > div {
+  margin: 15px; /* 各要素の周囲にマージンを追加 */
+}
+
+.article-main {
+  padding-left: 30px; /* 左側にパディングを追加 */
+}
+
+.article-main-body > div, 
+.article-main-body > h1, 
+.article-main-body > h2, 
+.article-main-body > a {
+  margin: 20px 0;  /* 各要素の上下にマージンを追加 */
+  line-height: 2.0;  /* 行間を調整 */
+}
+
+.article-main-text {
+  margin-bottom: 60px !important;  /* 下側のマージンを追加 */
+  font-size: 1.5em;  /* テキストサイズを指定 */
+}
+
+/* # description */
+.article-main-description > aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.article-main-description > aside > div {
+  margin: 10px 0;  /* 子要素（div）の上下にマージンを追加 */
+  padding: 10px;  /* 子要素（div）の内側にパディングを適用 */
+  background-color: white;
+  border-radius: 10px; /* 角を丸くする */
+}
+

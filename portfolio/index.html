@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coding_copy</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header-parent">
+    <div class="header-left">
+      <img src="images/Zenn.png" alt="Zenn Icon">
+    </div>
+    <div class="header-right">
+      <div><img src="images/search.svg" alt="虫眼鏡"></div>
+      <div><img src="images/bell.svg" alt="bell"></div>
+      <div><img src="images/cat.png" alt="cat Icon"></div>
+      <div><button type="button" class="btn btn-primary">投稿する</button></div>
+    </div>
+  </header>
+
+  <article class="article">
+
+    <!-- 記事のヘッダー -->
+    <header class="article-header">
+      <div class="article-header-icon">
+        <img src="images/write.png" alt="ライティング" width="88" height="100">
+      </div>
+      <div class="article-header-title">
+        <b>Zennの2種類の執筆方法について</b>
+      </div>
+    </header>
+
+    <!-- 本サイトのメイン内容 -->
+    <div class="article-main">
+      <!-- いいねやツイート -->
+
+      <div class="main-sub">
+        <div><img src="images/suit-heart.svg" alt="like" width="88" height="100"></div>
+        <p>いいね</p>
+        <div><img src="images/twitter.svg" alt="tweet" width="88" height="100"></div>
+        <p>ツイート</p>
+      </div>
+
+      <!-- メイン記事の内容 -->
+      <div class="article-main-body">
+        <div><img src="images/mini-icon.png" alt="like" width="320" height="120"></div>
+        <div class="article-main-text">このページではZennで記事や本を作成するときの執筆環境について紹介します。</div>
+        <h1>Zenn の執筆方法は 2 種類</h1>
+        <h2>1. Webエディター</h2>
+        <div>ブラウザ上で動くエディターです。Zennにログインした状態で使用します。</div>
+        <h2>2. ローカルのテキストエディター + CLI</h2>
+        <div>自分の好きな環境で執筆したい方はGitHub リポジトリとの連携機能を利用することをおすすめします。リポジトリ連携をすると、特定のブランチに変更があったときに自動でコンテンツがzenn.devに反映されるようになります。</div>
+        <a href="https://zenn.dev/zenn/articles/connect-to-github">📘 Zenn と GitHub リポジトリを連携する →</a>
+      </div>
+
+      <!-- 記載要項 -->
+      <div class="article-main-description">
+        <aside>
+          <div>公開日</div>
+          <div>Zenn公式</div>
+          <div>目次</div>
+        </aside>
+      </div>
+    </div>
+
+  </article>
+</body>
+</html>
