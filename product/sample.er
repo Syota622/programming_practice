@@ -1,0 +1,29 @@
+[products] {bgcolor: "#d0e0d0"}
+  *id {label: "varchar, not null"}
+  user_name {label: "varchar, not null, uniq"}
+  phone_number {label: "varchar, not null, uniq"}
+  display_name {label: "varchar, not null"}
+  self_introduction {label: "varchar, not null"}
+
+[carts]
+  *id {label: "varchar, not null"}
+  user_id {label: "varchar, not null, FK(users)"}
+  content {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[cart_items]
+  *id {label: "varchar, not null"}
+  user_id { label: "varchar, not null, FK(users)"}
+  tweet_id { label: "varchar, not null, FK(tweets)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+# Cardinality    Syntax
+# 0 or 1         ?
+# exactly 1      1
+# 0 or more      *
+# 1 or more      +
+users 1--* `tweets` {label: "user_id"}
+users 1--* `likes` {label: "user_id"}
+tweets *--1 `likes` {label: "tweet_id"}
