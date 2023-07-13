@@ -1,21 +1,58 @@
 [products] {bgcolor: "#d0e0d0"}
-  *id {label: "varchar, not null"}
-  user_name {label: "varchar, not null, uniq"}
-  phone_number {label: "varchar, not null, uniq"}
-  display_name {label: "varchar, not null"}
-  self_introduction {label: "varchar, not null"}
+  *id {label: "varchar, not null, uniq"}
+  name {label: "varchar, not null"}
+  description {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+  price {label: "varchar, not null"}
 
 [carts]
-  *id {label: "varchar, not null"}
-  user_id {label: "varchar, not null, FK(users)"}
-  content {label: "varchar, not null"}
+  *id {label: "varchar, not null, uniq"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
 [cart_items]
-  *id {label: "varchar, not null"}
-  user_id { label: "varchar, not null, FK(users)"}
-  tweet_id { label: "varchar, not null, FK(tweets)"}
+  *id {label: "varchar, not null, uniq"}
+  cart_id { label: "varchar, not null, FK(products)"}
+  product_id { label: "varchar, not null, FK(carts)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[orders]
+  *id {label: "varchar, not null, uniq"}
+  cart_id { label: "varchar, not null, FK(cars)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[order_items]
+  *id {label: "varchar, not null, uniq"}
+  order_id { label: "varchar, not null, FK(orders)"}
+  product_id { label: "varchar, not null, FK(products)"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[addresses]
+  *id {label: "varchar, not null, uniq"}
+  order_id { label: "varchar, not null, FK(orders)"}
+  first_name {label: "varchar, not null"}
+  last_name {label: "varchar, not null"}
+  user_name {label: "varchar, not null, uniq"}
+  email_name {label: "varchar, not null"}
+  address1 {label: "varchar, not null, uniq"}
+  address2 {label: "varchar, uniq"}
+  country {label: "varchar, not null, uniq"}
+  prefectures {label: "varchar, not null, uniq"}
+  post_code {label: "varchar, not null, uniq"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[payments]
+  *id {label: "varchar, not null, uniq"}
+  order_id { label: "varchar, not null, FK(orders)"}
+  name_card {label: "varchar, not null"}
+  credit_number {label: "varchar, not null, uniq"}
+  expiration {label: "varchar, not null"}
+  cvv {label: "varchar, not null"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
@@ -24,6 +61,10 @@
 # exactly 1      1
 # 0 or more      *
 # 1 or more      +
-users 1--* `tweets` {label: "user_id"}
-users 1--* `likes` {label: "user_id"}
-tweets *--1 `likes` {label: "tweet_id"}
+cart_items *--1 `products` {label: "product_id"}
+cart_items *--1 `carts` {label: "cart_id"}
+orders *--1 `carts` {label: "cart_id"}
+order_items *--1 `products` {label: "product_id"}
+order_items *--1 `orders` {label: "order_id"}
+addresses *--1 `orders` {label: "order_id"}
+payments *--1 `orders` {label: "order_id"}
