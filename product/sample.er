@@ -15,6 +15,7 @@
   *id {label: "varchar, not null, uniq"}
   cart_id { label: "varchar, not null, FK(products)"}
   product_id { label: "varchar, not null, FK(carts)"}
+  quantity { label: "integer, not null, FK(carts)"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
@@ -28,8 +29,11 @@
   *id {label: "varchar, not null, uniq"}
   order_id { label: "varchar, not null, FK(orders)"}
   product_id { label: "varchar, not null, FK(products)"}
+  quantity { label: "integer, not null, FK(carts)"}
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
+  price {label: "integer, not null"}
+  name {label: "varchar, not null"}
 
 [addresses]
   *id {label: "varchar, not null, uniq"}
