@@ -60,6 +60,14 @@
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
+[promotion_codes]
+  *id {label: "varchar, not null, uniq"}
+  discount_amount { label: "integer, not null"}
+  expiration {label: "varchar, not null"}
+  used {label: "boolean, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
 # Cardinality    Syntax
 # 0 or 1         ?
 # exactly 1      1
