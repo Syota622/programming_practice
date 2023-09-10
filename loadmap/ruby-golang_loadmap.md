@@ -139,7 +139,7 @@ Golangの現場でよく使われる技術です。これはMySQLやPostgreSQL�
 
 ## JavaScript
 ### 初級
-- [JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)
+- ~~[JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)~~
 
 ### 中級
 - [JavaScript Primer \- 迷わないための入門書 \#jsprimer](13_javascript/001_js_primer.md)
@@ -208,7 +208,7 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 
 - ~~[AWSで学ぶ！Dockerコンテナ・CI/CDパイプライン入門 \| Udemy](19.3_deploy/01_インプット課題.md)~~
 - ~~[Amazon ECS × GitHub Actionsで始めるコンテナベースのアプリケーション開発 \| Udemy](19.3_deploy/02_インプット課題.md)~~
-- ~~[GitHub Actionsで学ぶCI/CD入門―ビルド・デプロイの基本からAPI自動テスト・AWSへの自動デプロイまで \| Udemy](19.3_deploy/03_イン~~プット課題.md)
+- ~~[GitHub Actionsで学ぶCI/CD入門―ビルド・デプロイの基本からAPI自動テスト・AWSへの自動デプロイまで \| Udemy](19.3_deploy/03_インプット課題.md)~~
 - ~~[GitHub Actions と AWS で実現する DevOps 実践講座](19.3_deploy/04_インプット課題.md)~~
 - [自動デプロイ](19.3_deploy/05_アウトプット課題.md)
 
@@ -230,15 +230,39 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 - Next.jsとTypeSctiptを使う
 - できればTerraformを使ってインフラをコード化する
 
-## 面接対策編
-
-- [面接対策](interview/面接対策.md)
-
 ## GraphQL【発展・現役エンジニア向け】
 - [インプット課題](17.02_graphql/01_インプット課題.md)
 - [インプット課題(※golangコースのみ対象)](17.02_graphql/02_インプット課題golang.md)
 - [インプット課題2](17.02_graphql/03_インプット課題2.md)
 - [アウトプット課題](17.02_graphql/04_output課題.md)
+
+# 5. 学習ロードマップ（Golang:Other）
+
+## Golang上級【発展・現役エンジニア向け】
+ここまでやらなくてもポートフォリオは作れます。
+
+### Protocol Buffers + gRPC
+マイクロサービス開発で必須となるgRPCを学ぶ。
+- [Protocol Buffers Crash Course \- YouTube](https://www.youtube.com/watch?v=46O73On0gyI)
+- [gRPC Crash Course \- Modes, Examples, Pros & Cons and more \- YouTube](https://www.youtube.com/watch?v=Yw4rkaTc0f8)
+- [Go言語で学ぶ実践gRPC入門 \| Udemy](https://www.udemy.com/course/go-grpc-x/)
+- [作ってわかる！ はじめてのgRPC](https://zenn.dev/hsaki/books/golang-grpc-starting)
+
+### アーキテクチャ
+[Railsコースのアプリケーション設計](https://github.com/happiness-chain/practice/blob/main/22_design_application/01_%E3%82%A4%E3%83%B3%E3%83%97%E3%83%83%E3%83%88%E8%AA%B2%E9%A1%8C.md)も参考にしてください。
+
+- [【Go】DDD \+ レイヤードアーキテクチャでREST APIを実装する \| みんたく](https://mintaku-blog.net/go-ddd/)
+- [DDDを意識しながらレイヤードアーキテクチャとGoでAPIサーバーを構築する \- Qiita](https://qiita.com/ryokky59/items/6c2b35169fb6acafce15)
+
+## 自作サービス作成
+この動画の構成でAPIを作成する。gRPCは不要です。
+- [Backend master class \(【重要】ディレクトリ構成やプロジェクトの雛形はこの動画を参考にしてください。\)](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
+
+# 6. 学習ロードマップ（Other）
+
+## 面接対策編
+
+- [面接対策](interview/面接対策.md)
 
 ## AWS中級【発展・現役エンジニア向け】
 
@@ -276,25 +300,3 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 
 ## Happiness Chain
 - [幸せになるマインドを学ぶ](24_happiness_chain/01.md)
-
-# 5. 学習ロードマップ（Golang:Other）
-
-## Golang上級【発展・現役エンジニア向け】
-ここまでやらなくてもポートフォリオは作れます。
-
-### Protocol Buffers + gRPC
-マイクロサービス開発で必須となるgRPCを学ぶ。
-- [Protocol Buffers Crash Course \- YouTube](https://www.youtube.com/watch?v=46O73On0gyI)
-- [gRPC Crash Course \- Modes, Examples, Pros & Cons and more \- YouTube](https://www.youtube.com/watch?v=Yw4rkaTc0f8)
-- [Go言語で学ぶ実践gRPC入門 \| Udemy](https://www.udemy.com/course/go-grpc-x/)
-- [作ってわかる！ はじめてのgRPC](https://zenn.dev/hsaki/books/golang-grpc-starting)
-
-### アーキテクチャ
-[Railsコースのアプリケーション設計](https://github.com/happiness-chain/practice/blob/main/22_design_application/01_%E3%82%A4%E3%83%B3%E3%83%97%E3%83%83%E3%83%88%E8%AA%B2%E9%A1%8C.md)も参考にしてください。
-
-- [【Go】DDD \+ レイヤードアーキテクチャでREST APIを実装する \| みんたく](https://mintaku-blog.net/go-ddd/)
-- [DDDを意識しながらレイヤードアーキテクチャとGoでAPIサーバーを構築する \- Qiita](https://qiita.com/ryokky59/items/6c2b35169fb6acafce15)
-
-## 自作サービス作成
-この動画の構成でAPIを作成する。gRPCは不要です。
-- [Backend master class \(【重要】ディレクトリ構成やプロジェクトの雛形はこの動画を参考にしてください。\)](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
