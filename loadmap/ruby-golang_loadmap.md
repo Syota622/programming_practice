@@ -86,12 +86,14 @@
 
 # 2. 学習ロードマップ（Golang）
 
-## インプット
+## Golang初級
+
+### インプット
 - [【プログラミング入門】これからはじめるGo \- YouTube](https://www.youtube.com/watch?v=87MV0Z_lnaA)
 - [Golang基礎入門 \+ 各種ライブラリ \+ 簡単なTodoWebアプリケーション開発](https://www.udemy.com/course/golang-webgosql/)
 - [スターティングGo言語](https://www.amazon.co.jp/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0Go%E8%A8%80%E8%AA%9E-CodeZine-BOOKS-%E6%9D%BE%E5%B0%BE-%E6%84%9B%E8%B3%80/dp/4798142417/ref=sr_1_12?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2XSRIOMTEU07N&keywords=Golang&qid=1663032683&sprefix=golang%2Caps%2C238&sr=8-12)
 
-## アウトプット課題
+### アウトプット課題
 - [課題001](practice/001.md)
 - [課題002](practice/002.md)
 - [課題003](practice/003.md)
