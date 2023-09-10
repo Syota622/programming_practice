@@ -84,7 +84,36 @@
 - [Everyday Rails - RSpecによるRailsテスト入門](12_test/002_RSpecによるRailsテスト入門.md)
 - [自動テスト](12_test/003_自動テスト.md)
 
-# 2. 学習ロードマップ（Golang）
+# 2. 学習ロードマップ（Javascript&React）
+
+## JavaScript
+### 初級
+- ~~[JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)~~
+
+### 中級
+- [JavaScript Primer \- 迷わないための入門書 \#jsprimer](13_javascript/001_js_primer.md)
+- [課題:カレンダー](13_javascript/001_カレンダー.md)をやる
+- [課題:ToDo List](13_javascript/002_todo_list.md)をやる
+
+### 上級
+Udemyは難しいです。完全に理解しようとしなくていいです。
+- [【JS】ガチで学びたい人のためのJavaScriptメカニズム \| Udemy](https://www.udemy.com/course/javascript-essence/)
+- [JS上級課題](13_javascript/003_上級_課題.md)をやる
+
+## React
+### 初級
+- [Reactの公式チュートリアル](14_react/001_reactの公式チュートリアル.md)
+- [モダンJavaScriptの基礎から始める挫折しないためのReact入門 \| Udemy](14_react/001.1_モダンJavaScriptの基礎から始める挫折しないためのReact入門.md)
+
+### 中級
+- [Reactに入門した人のためのもっとReactが楽しくなるステップアップコース完全版 \| Udemy](https://www.udemy.com/course/react_stepup/)
+- [ToDo List](14_react/002_todo_list.md)を作る
+
+### 上級
+- [【Reactアプリ開発】](14.2_react/001_課題.md)
+- [ReactでTrelloクローン](14.2_react/002_課題.md)
+
+# 3. 学習ロードマップ（Golang）
 
 ## Golang初級
 
@@ -137,35 +166,6 @@ Golangの現場でよく使われる技術です。これはMySQLやPostgreSQL�
 - [Golangでtwitter cloneを作る](practice/twitter_clone.md)
 - [Golangのwebアプリケーションをデプロイする](practice/deploy.md)
 
-# 3. 学習ロードマップ（React&Golang）
-
-## JavaScript
-### 初級
-- ~~[JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)~~
-
-### 中級
-- [JavaScript Primer \- 迷わないための入門書 \#jsprimer](13_javascript/001_js_primer.md)
-- [課題:カレンダー](13_javascript/001_カレンダー.md)をやる
-- [課題:ToDo List](13_javascript/002_todo_list.md)をやる
-
-### 上級
-Udemyは難しいです。完全に理解しようとしなくていいです。
-- [【JS】ガチで学びたい人のためのJavaScriptメカニズム \| Udemy](https://www.udemy.com/course/javascript-essence/)
-- [JS上級課題](13_javascript/003_上級_課題.md)をやる
-
-## React
-### 初級
-- [Reactの公式チュートリアル](14_react/001_reactの公式チュートリアル.md)
-- [モダンJavaScriptの基礎から始める挫折しないためのReact入門 \| Udemy](14_react/001.1_モダンJavaScriptの基礎から始める挫折しないためのReact入門.md)
-
-### 中級
-- [Reactに入門した人のためのもっとReactが楽しくなるステップアップコース完全版 \| Udemy](https://www.udemy.com/course/react_stepup/)
-- [ToDo List](14_react/002_todo_list.md)を作る
-
-### 上級
-- [【Reactアプリ開発】](14.2_react/001_課題.md)
-- [ReactでTrelloクローン](14.2_react/002_課題.md)
-
 ## Webセキュリティ
 - ~~[Webセキュリティについて理解する](12.1_web_security/01_webセキュリティ.md)~~
 
@@ -173,7 +173,6 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 
 - [ReactとGoでSPAアプリケーションの作り方を学ぶ](practice/spa.md)
 - [SPAアウトプット課題](practice/spa_output.md)
-
 
 # 4. 学習ロードマップ（Ruby:Other）
 
