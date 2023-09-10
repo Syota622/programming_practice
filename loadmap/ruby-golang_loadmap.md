@@ -201,7 +201,7 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 ## AWS初級
 - ~~[新CCNA（200\-301）完全未経験からの合格講座（上） \| Udemy](19_AWS/001_完全未経験からの合格講座.md)~~
 - ~~[AWS：ゼロから実践するAmazon Web Services。手を動かしながらインフラの基礎を習得 \| Udemy](19_AWS/002_ゼロから実践するAWS.md)~~
-- ~~[AWSでDockerを本番運用！AmazonECSを使って低コストでコンテナを運用する実践コース \| Udemy](19_AWS/003_AWSでDockerを本番運用.~~md)
+- ~~[AWSでDockerを本番運用！AmazonECSを使って低コストでコンテナを運用する実践コース \| Udemy](19_AWS/003_AWSでDockerを本番運用.md)~~
 - [Rails課題のアプリをAWSにデプロイする](19_AWS/005_Railsのデプロイ.md)
 
 ## デプロイ
