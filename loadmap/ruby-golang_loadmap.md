@@ -273,8 +273,8 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 
 ## AWS上級【発展・現役エンジニア向け】
 - [イベント駆動型の課題](19.2_AWS/001_イベント駆動型.md)
-- [AWSで実現するモダンアプリケーション入門 〜サーバーレス、コンテナ、マイクロサービスで何ができるのか](https://www.amazon.co.jp/AWS%E3%81%A7%E5%AE%9F%E7%8F%BE%E3%81%99%E3%82%8B%E3%83%A2%E3%83%80%E3%83%B3%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%85%A5%E9%96%80-%E3%80%9C%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9%E3%80%81%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%80%81%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A7%E4%BD%95%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%AE%E3%81%8B-%E8%90%BD%E6%B0%B4-%E6%81%AD%E4%BB%8B/dp/4297133261/?_encoding=UTF8&pd_rd_w=Xkz3k&content-id=amzn1.sym.bace0613-1c2d-4b31-b7bc-0f245955d8a8&pf_rd_p=bace0613-1c2d-4b31-b7bc-0f245955d8a8&pf_rd_r=A7VGAVPXPD87ARWX9G4D&pd_rd_wg=1qnUy&pd_rd_r=2e937a49-3dbc-4c6c-afe4-36f1ebd9d0dd&ref_=pd_gw_bmx_gp_9l59gkoo)
-- [AWSコンテナ設計・構築\[本格\]入門 ](https://www.amazon.co.jp/AWS%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E8%A8%AD%E8%A8%88%E3%83%BB%E6%A7%8B%E7%AF%89-%E6%9C%AC%E6%A0%BC-%E5%85%A5%E9%96%80-%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E9%87%8E%E6%9D%91%E7%B7%8F%E5%90%88%E7%A0%94%E7%A9%B6%E6%89%80/dp/4815607656/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2G1NG2S9PXJKX&keywords=aws+ecs&qid=1676009395&s=books&sprefix=aws+ecs%2Cstripbooks%2C192&sr=1-1)
+- [AWSで実現するモダンアプリケーション入門 〜サーバーレス、コンテナ、マイクロサービスで何ができるのか]
+- [AWSコンテナ設計・構築\[本格\]入門 ]
 
 ## Kubernetes【発展・現役エンジニア向け】
 - [Kubernetesの基本](20.1_kubernetes/01_Kubernetesの基本.md)
