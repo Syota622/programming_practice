@@ -88,10 +88,10 @@
 
 ## JavaScript
 ### 初級
-- ~~[JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)~~
+- [JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)
 
 ### 中級
-- ~~[JavaScript Primer \- 迷わないための入門書 \#jsprimer](13_javascript/001_js_primer.md)~~
+- [JavaScript Primer \- 迷わないための入門書 \#jsprimer](13_javascript/001_js_primer.md)
 - ~~[課題:カレンダー](13_javascript/001_カレンダー.md)をやる~~
 - ~~[課題:ToDo List](13_javascript/002_todo_list.md)をやる~~
 
@@ -102,8 +102,8 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 
 ## React
 ### 初級
-- [Reactの公式チュートリアル](14_react/001_reactの公式チュートリアル.md)
-- [モダンJavaScriptの基礎から始める挫折しないためのReact入門 \| Udemy](14_react/001.1_モダンJavaScriptの基礎から始める挫折しないためのReact入門.md)
+- [Reactの公式チュートリアル](14_react/001_reactの公式チュートリアル.md)(https://ja.react.dev/learn)
+- ~~[モダンJavaScriptの基礎から始める挫折しないためのReact入門 \| Udemy](14_react/001.1_モダンJavaScriptの基礎から始める挫折しないためのReact入門.md)~~
 
 ### 中級
 - [Reactに入門した人のためのもっとReactが楽しくなるステップアップコース完全版 \| Udemy](https://www.udemy.com/course/react_stepup/)
@@ -177,6 +177,12 @@ Golangの現場でよく使われる技術です。これはMySQLやPostgreSQL�
 - [ReactとGoでSPAアプリケーションの作り方を学ぶ](practice/spa.md)
 - [SPAアウトプット課題](practice/spa_output.md)
 
+## GraphQL【発展・現役エンジニア向け】
+- [インプット課題](17.02_graphql/01_インプット課題.md)
+- [インプット課題(※golangコースのみ対象)](17.02_graphql/02_インプット課題golang.md)
+- [インプット課題2](17.02_graphql/03_インプット課題2.md)
+- [アウトプット課題](17.02_graphql/04_output課題.md)
+
 # 4. 学習ロードマップ（Ruby:Other）
 
 ## シングルページアプリケーション
@@ -232,12 +238,6 @@ Golangの現場でよく使われる技術です。これはMySQLやPostgreSQL�
 - GitHub Actionsを使ってAWSに自動デプロイする
 - Next.jsとTypeSctiptを使う
 - できればTerraformを使ってインフラをコード化する
-
-## GraphQL【発展・現役エンジニア向け】
-- [インプット課題](17.02_graphql/01_インプット課題.md)
-- [インプット課題(※golangコースのみ対象)](17.02_graphql/02_インプット課題golang.md)
-- [インプット課題2](17.02_graphql/03_インプット課題2.md)
-- [アウトプット課題](17.02_graphql/04_output課題.md)
 
 # 5. 学習ロードマップ（Golang:Other）
 
