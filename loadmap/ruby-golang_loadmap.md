@@ -162,7 +162,6 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 - [Webセキュリティについて理解する](12.1_web_security/01_webセキュリティ.md)
 
 ## シングルページアプリケーション
-- [React と Rails を利用してTODOアプリを作成しよう](https://www.youtube.com/playlist?list=PL7dhNz439lnT0O90GcLR8XpeR49uDIYYF)
 - [ReactとGoでSPAアプリケーションの作り方を学ぶ](practice/spa.md)
 - [SPAアウトプット課題](practice/spa_output.md)
 
@@ -180,6 +179,7 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 - [自動テスト](12_test/003_自動テスト.md)
 
 ## シングルページアプリケーション
+- [React と Rails を利用してTODOアプリを作成しよう](https://www.youtube.com/playlist?list=PL7dhNz439lnT0O90GcLR8XpeR49uDIYYF)
 - [RailsとReactでUberEats風SPAアプリケーションをつくってみよう！ \| Techpit](https://www.techpit.jp/courses/138)をやる
 - [SPA実践課題](14.2_react/003_課題.md)
 
