@@ -131,6 +131,12 @@ Golangの現場でよく使われる技術です。これはMySQLやPostgreSQL�
 - [Golangでtwitter cloneを作る](practice/twitter_clone.md)
 - [Golangのwebアプリケーションをデプロイする](practice/deploy.md)
 
+## GraphQL【発展・現役エンジニア向け】
+- [インプット課題](17.02_graphql/01_インプット課題.md)
+- [インプット課題(※golangコースのみ対象)](17.02_graphql/02_インプット課題golang.md)
+- [インプット課題2](17.02_graphql/03_インプット課題2.md)
+- [アウトプット課題](17.02_graphql/04_output課題.md)
+
 ## JavaScript
 ### 初級
 - [JavaScript入門・完全版](https://www.youtube.com/watch?v=ig3GosWuKF0)
@@ -164,24 +170,6 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 ## シングルページアプリケーション
 - [ReactとGoでSPAアプリケーションの作り方を学ぶ](practice/spa.md)
 - [SPAアウトプット課題](practice/spa_output.md)
-
-## GraphQL【発展・現役エンジニア向け】
-- [インプット課題](17.02_graphql/01_インプット課題.md)
-- [インプット課題(※golangコースのみ対象)](17.02_graphql/02_インプット課題golang.md)
-- [インプット課題2](17.02_graphql/03_インプット課題2.md)
-- [アウトプット課題](17.02_graphql/04_output課題.md)
-
-# 3. 学習ロードマップ（Ruby:Other）
-
-## 自動テスト
-- ~~[テスト技法について学ぶ](12_test/001_テスト技法について学ぶ.md)~~
-- ~~[Everyday Rails - RSpecによるRailsテスト入門](12_test/002_RSpecによるRailsテスト入門.md)~~
-- [自動テスト](12_test/003_自動テスト.md)
-
-## シングルページアプリケーション
-- [React と Rails を利用してTODOアプリを作成しよう](https://www.youtube.com/playlist?list=PL7dhNz439lnT0O90GcLR8XpeR49uDIYYF)
-- [RailsとReactでUberEats風SPAアプリケーションをつくってみよう！ \| Techpit](https://www.techpit.jp/courses/138)をやる
-- [SPA実践課題](14.2_react/003_課題.md)
 
 ## TypeScript
 - [ハンズオンで学ぶTypeScript \- JavaScript エンジニアのためのTypeScript徹底入門 \| Udemy](https://www.udemy.com/course/ts-for-js-developers/)
@@ -219,6 +207,22 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 - ~~[terraform入門](20_Terraform/001_terraform入門.md)~~
 - ~~[terraform実践](20_Terraform/002_terraform実践.md)~~
 
+## 自作サービス作成
+この動画の構成でAPIを作成する。gRPCは不要です。
+- [Backend master class \(【重要】ディレクトリ構成やプロジェクトの雛形はこの動画を参考にしてください。\)](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
+
+# 3. 学習ロードマップ（Ruby:Other）
+
+## 自動テスト
+- ~~[テスト技法について学ぶ](12_test/001_テスト技法について学ぶ.md)~~
+- ~~[Everyday Rails - RSpecによるRailsテスト入門](12_test/002_RSpecによるRailsテスト入門.md)~~
+- [自動テスト](12_test/003_自動テスト.md)
+
+## シングルページアプリケーション
+- [React と Rails を利用してTODOアプリを作成しよう](https://www.youtube.com/playlist?list=PL7dhNz439lnT0O90GcLR8XpeR49uDIYYF)
+- [RailsとReactでUberEats風SPAアプリケーションをつくってみよう！ \| Techpit](https://www.techpit.jp/courses/138)をやる
+- [SPA実践課題](14.2_react/003_課題.md)
+
 ## アジャイル開発
 
 - [アジャイル開発について学ぶ](23_agile/01_アジャイル開発.md)
@@ -251,11 +255,7 @@ Udemyは難しいです。完全に理解しようとしなくていいです。
 - [【Go】DDD \+ レイヤードアーキテクチャでREST APIを実装する \| みんたく](https://mintaku-blog.net/go-ddd/)
 - [DDDを意識しながらレイヤードアーキテクチャとGoでAPIサーバーを構築する \- Qiita](https://qiita.com/ryokky59/items/6c2b35169fb6acafce15)
 
-## 自作サービス作成
-この動画の構成でAPIを作成する。gRPCは不要です。
-- [Backend master class \(【重要】ディレクトリ構成やプロジェクトの雛形はこの動画を参考にしてください。\)](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
-
-# 6. 学習ロードマップ（Other）
+# 5. 学習ロードマップ（Other）
 
 ## 面接対策編
 
