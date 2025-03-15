@@ -1,1 +1,1 @@
-console.log('こんにちは');
+let num: number = 10;
