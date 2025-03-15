@@ -1,1 +1,1 @@
-console.log('こんにちは');
+var num = 10;
